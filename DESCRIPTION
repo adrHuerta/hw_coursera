@@ -1,0 +1,11 @@
+Package: hwcoursera
+Type: Package
+Title: hwcoursera (Coursera Homework)
+Version: 0.1.0
+Author: Adrian Huerta
+Maintainer: Adrian Huerta <adrhuerta@gmail.com>
+Description: Assessment for me to combine my skills of creating, 
+    writing, documenting, and testing an R package.
+License: MIT
+Encoding: UTF-8
+LazyData: true
