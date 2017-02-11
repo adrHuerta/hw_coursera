@@ -8,4 +8,11 @@ Description: Assessment for me to combine my skills of creating,
     writing, documenting, and testing an R package.
 License: MIT
 Encoding: UTF-8
-LazyData: true
+LazyData: false
+Imports:
+  readr (>= 1.0.0),
+  dplyr (>= 0.5.0),
+  tidyr (>= 0.6.1),
+  maps (>= 3.1.1),
+  graphics (>= 3.3.2)
+RoxygenNote: 6.0.1
