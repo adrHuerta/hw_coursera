@@ -20,7 +20,3 @@ Create a map of the count of accidents by giving information of year and state n
 \details{
 if state number does not exist, a warning message appears. In addition, function does return nothing if there is not information of accidents
 }
-\examples{
-fars_map_state(state.num = "1", years = "2015")
-fars_map_state(state.num = 1, years = 2015)
-}

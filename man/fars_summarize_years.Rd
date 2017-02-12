@@ -15,7 +15,3 @@ an object of tbl_df class with two variables: year and n (count)
 \description{
 Read information of specific year giving summarize information
 }
-\examples{
-fars_summarize_years("2015")
-fars_summarize_years(2015)
-}

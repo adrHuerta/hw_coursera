@@ -1,12 +1,10 @@
 ---
 title: "hwcoursera package for Fatality Analysis"
 author: "Adrian Huerta"
-date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{hwcoursera package for Fatality Analysis}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+date: '`r Sys.Date()`'
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 This vignette provides an example of how to use the  **hwcoursera** package for fatality analysis reporting system database.

@@ -31,9 +31,6 @@ make_filename <- function(year) {
 #' @importFrom dplyr mutate %>% select
 #' @details if the value of year is not in the data, a warning message appears
 #' @return an object of tbl_df class with two variables: month and year
-#' @examples
-#' fars_read_years("2015")
-#' fars_read_years(2015)
 #' @export
 fars_read_years <- function(years) {
   lapply(years, function(year) {
@@ -54,9 +51,6 @@ fars_read_years <- function(years) {
 #' @importFrom dplyr bind_rows group_by summarize
 #' @importFrom tidyr spread
 #' @return an object of tbl_df class with two variables: year and n (count)
-#' @examples
-#' fars_summarize_years("2015")
-#' fars_summarize_years(2015)
 #' @export
 fars_summarize_years <- function(years) {
   dat_list <- fars_read_years(years)
@@ -73,9 +67,6 @@ fars_summarize_years <- function(years) {
 #' @importFrom ggplot2 ggplot geom_polygon map_data aes guides geom_point coord_quickmap
 #' @details if state number does not exist, a warning message appears. In addition, function does return nothing if there is not information of accidents
 #' @return a plot of a map where dots represent accidents
-#' @examples
-#' fars_map_state(state.num = "1", years = "2015")
-#' fars_map_state(state.num = 1, years = 2015)
 #' @export
 fars_map_state <- function(state.num, year) {
   filename <- make_filename(year)

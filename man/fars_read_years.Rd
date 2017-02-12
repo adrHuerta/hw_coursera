@@ -18,7 +18,3 @@ Read information of specific year
 \details{
 if the value of year is not in the data, a warning message appears
 }
-\examples{
-fars_read_years("2015")
-fars_read_years(2015)
-}
