@@ -70,8 +70,7 @@ fars_summarize_years <- function(years) {
 #' @param state.num an character or integer value that represent a state
 #' @param year an character or integer value that represent a year
 #' @importFrom dplyr filter
-#' @importFrom maps map
-#' @importFrom graphics points
+#' @importFrom ggplot2 ggplot geom_polygon map_data aes guides geom_point coord_quickmap
 #' @details if state number does not exist, a warning message appears. In addition, function does return nothing if there is not information of accidents
 #' @return a plot of a map where dots represent accidents
 #' @examples
@@ -92,9 +91,13 @@ fars_map_state <- function(state.num, year) {
   }
   is.na(data.sub$LONGITUD) <- data.sub$LONGITUD > 900
   is.na(data.sub$LATITUDE) <- data.sub$LATITUDE > 90
-  with(data.sub, {
-    maps::map("state", ylim = range(LATITUDE, na.rm = TRUE),
-              xlim = range(LONGITUD, na.rm = TRUE))
-    graphics::points(LONGITUD, LATITUDE, pch = 46)
-  })
+
+  ggplot2::ggplot() +
+    ggplot2::geom_polygon(data = ggplot2::map_data("state"),
+                          ggplot2::aes(x = long, y = lat, group = group), fill = NA, color = "black") +
+    ggplot2::guides(fill=FALSE) +
+    ggplot2::geom_point(data = data.sub,
+                        ggplot2::aes(LONGITUD, LATITUDE), shape = 46) +
+    ggplot2::coord_quickmap(xlim = range(data.sub$LONGITUD, na.rm = TRUE),
+                            ylim = range(data.sub$LATITUDE, na.rm = TRUE))
 }

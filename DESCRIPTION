@@ -13,8 +13,7 @@ Imports:
   readr (>= 1.0.0),
   dplyr (>= 0.5.0),
   tidyr (>= 0.6.1),
-  maps (>= 3.1.1),
-  graphics (>= 3.3.2)
+  ggplot2 (>= 2.2.1),
 RoxygenNote: 6.0.1
 Suggests: knitr,
     rmarkdown
